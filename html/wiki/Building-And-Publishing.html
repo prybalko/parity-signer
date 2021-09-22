@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Changelog - Parity-Signer</title>
+        <title>Building-And-Publishing - Parity-Signer</title>
                 
 
         <!-- Custom HTML head -->
@@ -32,6 +32,8 @@
 
         <!-- Custom theme stylesheets -->
         
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
             </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -82,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">2.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html" class="active"><strong aria-hidden="true">3.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">4.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">5.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">6.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">7.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">8.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">9.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">10.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">11.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">12.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">13.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">14.</strong> Start</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html" class="active"><strong aria-hidden="true">2.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">3.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">4.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">5.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">6.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">7.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">8.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">9.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">10.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">11.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">12.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">13.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">14.</strong> Start</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,46 +145,41 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
-<h2 id="new-in-version-500"><a class="header" href="#new-in-version-500">New in version 5.0.0</a></h2>
-<h3 id="architecture"><a class="header" href="#architecture">Architecture</a></h3>
-<p>No more typescript or react native. Backend is completely in Rust, frontend is in native.</p>
-<h3 id="building"><a class="header" href="#building">Building</a></h3>
-<h4 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h4>
-<p>Number of dependencies was greatly reduced; no npm/yarn/nodejs/cocoapods, etc. All dependencies are handled by:</p>
-<ul>
-<li>Cargo (rust packages)</li>
-<li>XCode (only default iOS frameworks are used)</li>
-<li>Gradle</li>
-</ul>
-<h4 id="rust-backend"><a class="header" href="#rust-backend">Rust backend</a></h4>
-<p>Rust libraries were moved back into the repository. Crypto functions are imported from Substrate. All logic and most of storage is written in Rust. An important hack here is that <code>rust/signer</code> crate has 2 versions of Cargo.toml for android and ios architectures, as target library features could not be adjusted by normal means.</p>
-<h4 id="native-frontend"><a class="header" href="#native-frontend">Native frontend</a></h4>
-<p>Frontend for both iOS and Android re-written in native frameworks. Thus, standard out-of-the-box build scripts could be used for building once Rust libraries are built and linked</p>
-<h3 id="features"><a class="header" href="#features">Features</a></h3>
-<h4 id="secure-seed-storage"><a class="header" href="#secure-seed-storage">Secure seed storage</a></h4>
-<p>Secrets are stored in devices' encrypted storage and some effort is made to prevent them leaking in system memory. Thus, all is as safe as the phone is - the same credentials used for unlocking the phone are used to unlock seeds. User ir responsible to keep them adequate.</p>
-<h4 id="transaction-preview"><a class="header" href="#transaction-preview">Transaction preview</a></h4>
-<p>Transactions content is shown before signing; no hash signing is allowed, but signing messages is possible.</p>
-<h4 id="history-feature"><a class="header" href="#history-feature">History feature</a></h4>
-<p>The Signer now logs all operations it performs. It it important to remember that this is not log of account operations, but log of device history. This history could be cleared if needed, but not modified by other means. Detected presence of network connection is also logged.</p>
-<h4 id="n1-derivation"><a class="header" href="#n1-derivation">N+1 derivation</a></h4>
-<p>Much requested feature that makes Signer automatically increment numbered seeds on creation.</p>
-<h4 id="network-and-metadata-updates"><a class="header" href="#network-and-metadata-updates">Network and metadata updates</a></h4>
-<p>All network data updates now could be performed through scanning QR codes. Whenever some update is needed, most probably you should just scan some QR video. Don't worry about skipped frames, it's fountain code so you only need enough frames.</p>
-<p>All updates could be signed, and signing key will be trusted on first use, so Signer device sould be linked to single source of authority on correct metadata.</p>
-<h4 id="key-re-use-in-different-networks"><a class="header" href="#key-re-use-in-different-networks">Key re-use in different networks</a></h4>
-<p>Keys could be used only in one network. Need to re-use key in another network? Just create key with the same derivation path in that network to allow re-use and it will work.</p>
+                        <h1 id="building-and-publishing"><a class="header" href="#building-and-publishing">Building and Publishing</a></h1>
+<p><strong>Everything here is outdated, please do not use as is!</strong></p>
+<p>In this page we will list the steps to publish the app on iOS App Store / Android Play Store.</p>
+<h2 id="ios-app-store"><a class="header" href="#ios-app-store">iOS App Store</a></h2>
+<h5 id="build-production-version"><a class="header" href="#build-production-version">Build production version</a></h5>
+<ol>
+<li>Switch to the <code>master</code> branch and install the dependencies with <code>yarn install:ios</code></li>
+<li>Build the JS bundle with <code>yarn build-prod:ios</code></li>
+<li>Start the react-native server with <code>yarn start</code></li>
+<li>Build the project in Xcode, with <code>Generic iOS Device</code> selected on the top left</li>
+</ol>
+<h5 id="upload-to-ios-store"><a class="header" href="#upload-to-ios-store">Upload to iOS Store</a></h5>
+<ol>
+<li>On Xcode, Choose <code>Product -&gt; Archieve</code></li>
+<li>In the following menu, click <code>Validate App</code>.</li>
+<li>Click 'Distribute App' for uploading to Test Flight.</li>
+<li>Then it should be seen on Test Flight on <a href="https://appstoreconnect.apple.com/">Apple Connect</a>, after it is approved, it could be used with the internal test team.</li>
+</ol>
+<h2 id="android-play-store"><a class="header" href="#android-play-store">Android Play Store</a></h2>
+<ol>
+<li><code>yarn install</code> to install all the related dependencies.</li>
+<li><code>cd android &amp;&amp; ./gradlew assembleRelease</code> for generating unsigned apk.</li>
+<li>Sign the apk with keystore file</li>
+<li>In Google Play Console -&gt; Choose the App -&gt; Release Management on Left Panel -&gt; App Release on Left Panel -&gt; Production track -&gt; Manage -&gt; Create Release -&gt; Add the signed apk file here.</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../wiki/Building-And-Publishing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../wiki/Development.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../wiki/Changelog.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -192,11 +189,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../wiki/Building-And-Publishing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../wiki/Development.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../wiki/Changelog.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
@@ -228,6 +225,8 @@
         <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+                <script type="text/javascript" src="../mermaid.min.js"></script>
+                <script type="text/javascript" src="../mermaid-init.js"></script>
         
         
     </body>

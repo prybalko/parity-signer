@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>New-Network - Parity-Signer</title>
+        <title>Hierarchical-Deterministic-Key-Derivation - Parity-Signer</title>
                 
 
         <!-- Custom HTML head -->
@@ -32,6 +32,8 @@
 
         <!-- Custom theme stylesheets -->
         
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
             </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -82,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">2.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">3.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">4.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">5.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">6.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">7.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">8.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">9.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">10.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">11.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html" class="active"><strong aria-hidden="true">12.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">13.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">14.</strong> Start</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">2.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">3.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">4.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">5.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">6.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">7.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">8.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">9.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html" class="active"><strong aria-hidden="true">10.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">11.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">12.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">13.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">14.</strong> Start</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,33 +145,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="update-network-tutorial"><a class="header" href="#update-network-tutorial">Update Network Tutorial</a></h1>
-<p>Parity Signer support adding a new Substrate based network or update the existing network via QR code.</p>
-<h2 id="importing-network-from-polkadotjs"><a class="header" href="#importing-network-from-polkadotjs">Importing network from polkadot.js</a></h2>
-<p>This tutorial will walk through how to add a new Rococo Network with Polkadot.js App.</p>
-<p><strong>This is a work in progress, things could change</strong></p>
-<h3 id="1-get-the-network-metadata-as-qr-code"><a class="header" href="#1-get-the-network-metadata-as-qr-code">1. Get the network metadata as QR Code</a></h3>
-<p>Switch to the network you want to play with on Polkadot.js app. Click <code>Settings</code> -&gt; <code>MetaData</code></p>
-<p><img src="images/Network-Metadata-QR.png" alt="Network Metadata QR Code" /></p>
-<p>Here we can see the chain specifications like <code>Network Name</code>, <code>Address Prefix</code>, and <code>Genesis Hash</code> etc. They are all the metaData of the network which is required by Parity Signer. The only item we could change is network color, it is used on Parity Signer to distinguish other networks. </p>
-<p>On the right side is the QR Code we need.</p>
-<h3 id="2-scan-metadata-qr-code-with-parity-signer"><a class="header" href="#2-scan-metadata-qr-code-with-parity-signer">2. Scan metadata QR code with Parity Signer</a></h3>
-<p>Now on the Parity Signer app, click the QR scanner Button, and scan this QR code stream. Please check the hash and note the signig key - now all updates for this network and this particular Signer devise should be signed with the same key.</p>
-<p>If the preview information is legit, click &quot;Accept&quot; (otherwise cancel transaction). Now you will have the new Network added to Parity Signer. You can now create accounts under it and sign extrinsic with this network.</p>
-<p>Please note that as network develops, its metadata will change over time. New metadata should be downloaded in similar manner when new version is available before any transactions could be signed.</p>
-<h2 id="generate-network-updating-qr-stream"><a class="header" href="#generate-network-updating-qr-stream">Generate network updating QR stream</a></h2>
-<p>This is an advanced operation that should only be performed by experienced users on trusted machine. Remember, that any inaccuracy in network specifications or metadata may lead to serious security threat, loss of funds and/or general account access!</p>
-<p><a href="../rust/generate_message/readme.html">Update generator instructions</a></p>
+                        <h1 id="parity-signer-accounts-management"><a class="header" href="#parity-signer-accounts-management">Parity Signer Accounts Management</a></h1>
+<p>Parity Signer v4 has introduced the Hierarchical Deterministic Key Derivation (HDKD) feature for Substrate networks. This article explains how to use this feature.</p>
+<ul>
+<li>Notice: The UI maybe variant for different versions, but the functionalities are the same in v4 version.</li>
+</ul>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Seed is the starting point for generating accounts. The seed itself does not have any network affiliation. For Substrate networks, generating a new accounts means entering a derivation path and choosing a network. With this feature, you can manage as many accounts as needed with just one seed phrase safely stored.</p>
+<h2 id="key-generation"><a class="header" href="#key-generation">Key Generation</a></h2>
+<h3 id="create-an-account-for-a-substrate-based-network"><a class="header" href="#create-an-account-for-a-substrate-based-network">Create an account for a Substrate based network.</a></h3>
+<p>Key generation also refers to accounts creation, with your created Identity:</p>
+<ul>
+<li>Go to key manager and create a new seed or select an existing one</li>
+<li>Choose a network</li>
+<li>Tap on any key</li>
+<li>Tap <code>Derive</code> or <code>N+1</code> Button</li>
+<li>In path derivation screen, input any path and name you like (or accept naming suggestion)</li>
+<li>(optional) type password</li>
+<li>Tap <code>Derive</code> Button</li>
+<li>Done, you can start using new address.</li>
+</ul>
+<h3 id="the-form-of-path"><a class="header" href="#the-form-of-path">The form of path</a></h3>
+<p>Paths also refer to the Chaincodes which described in <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki/">BIP32</a>, though it is different from BIP-32 style:</p>
+<ul>
+<li><strong>Soft</strong> derivation starts with a single slash, like: <code>/soft</code></li>
+<li><strong>Hard</strong> derivation starts with a double slash, like: <code>//hard</code></li>
+</ul>
+<p>Users are able to create any combination of hard derivation with <code>//</code> and/or soft derivation with <code>/</code>.</p>
+<p>The encoded string are limited to 32 Bytes.</p>
+<p>For technical information about the soft and hard derivations on Substrate, please refer to introduction <a href="https://github.com/paritytech/parity-signer/wiki/HDKD-on-Parity-Signer#hdkd-general-on-substrate">here</a>.</p>
+<p>Path also could contain optional <strong>password</strong>; in Subkey standard password is prefixed with <code>///</code>. However, for convenience, Signer device has separate password entry field with password confirmation, thus do not add <code>///</code> to derivation field, it will result in error - instead omit <code>///</code> and type password into its' special field. It will not be stored on the device and will be required for any operation that requires private key of the account. There is no way to restore this password if it is lost so please back it up carefully.</p>
+<h3 id="further-notes"><a class="header" href="#further-notes">Further notes</a></h3>
+<ul>
+<li>With the same BIP32 seed users could create keys under different networks.</li>
+<li>Each derived account is bound to certain networks, which prevents it to be misused in another network until it is explicitly added for that network as well. Root account is available for all networks by default.</li>
+</ul>
+<h2 id="references"><a class="header" href="#references">References:</a></h2>
+<ol>
+<li><a href="https://github.com/w3f/schnorrkel">https://github.com/w3f/schnorrkel</a></li>
+<li><a href="https://wiki.polkadot.network/docs/en/learn-keys">https://wiki.polkadot.network/docs/en/learn-keys</a></li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../tutorials/Kusama-tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../wiki/Upgrading.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../tutorials/Recover-Account-Polkadotjs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../tutorials/Kusama-tutorial.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -179,11 +204,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../tutorials/Kusama-tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../wiki/Upgrading.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../tutorials/Recover-Account-Polkadotjs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../tutorials/Kusama-tutorial.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
@@ -215,6 +240,8 @@
         <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+                <script type="text/javascript" src="../mermaid.min.js"></script>
+                <script type="text/javascript" src="../mermaid-init.js"></script>
         
         
     </body>

@@ -33,6 +33,8 @@
 
         <!-- Custom theme stylesheets -->
         
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
             </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -144,17 +146,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p><img src="https://wiki.parity.io/images/logo-parity-signer.jpg" alt="Parity Signer" /></p>
-<p><a href="https://github.com/paritytech/parity-signer/releases/"><img src="./res/github-badge.png" width="250"/></a>
-<a href="https://play.google.com/store/apps/details?id=io.parity.signer"><img src="./res/google-play-badge.png" width="250"/></a>
-<a href="https://itunes.apple.com/us/app/parity-signer/id1218174838"><img src="./res/app-store-badge.png" width="250"/></a></p>
+                        <p><img src="./tutorials/images/logo-parity-signer.jpg" alt="Parity Signer" /></p>
+<p><a href="https://github.com/paritytech/parity-signer/releases/"><img src="./res/github-badge.png" width="250"/>
+</a>
+<a href="https://play.google.com/store/apps/details?id=io.parity.signer"><img src="./res/google-play-badge.png" width="250"/>
+</a>
+<a href="https://itunes.apple.com/us/app/parity-signer/id1218174838"><img src="./res/app-store-badge.png" width="250"/>
+</a></p>
 <h1 id="parity-signer---turn-your-smartphone-into-a-hardware-wallet"><a class="header" href="#parity-signer---turn-your-smartphone-into-a-hardware-wallet">Parity Signer - Turn your smartphone into a hardware wallet</a></h1>
-<p><img src="./docs/tutorials/images/logo-parity-signer.jpg" alt="Parity Signer" /></p>
+<p><img src="./tutorials/images/logo-parity-signer.jpg" alt="Parity Signer" /></p>
 <p>Parity Signer is a mobile application that allows any smartphone to act as an air-gapped crypto wallet. This is also known as &quot;cold storage&quot;.</p>
 <p>You can create accounts in Substrate-based networks, sign messages/transactions, and transfer funds to and from these accounts without any sort of connectivity enabled on the device.</p>
 <p>You must turn off or even physically remove the smartphone's Wifi, Mobile Network, and Bluetooth to ensure that the mobile phone containing these accounts will not be exposed to any online threat. Switching to airplane mode suffices in many cases.</p>
-<p><strong>Disabling the mobile phone's networking abilities is a requirement for the app to be used as intended, check our <a href="./docs/wiki/Security-And-Privacy.html">wiki</a> for more details.</strong></p>
-<p>Have a look at the tutorial on our wiki to learn how to use <a href="./docs/tutorials/Kusama-tutorial.html">Parity Signer together with Polkadot-js app</a>.</p>
+<p><strong>Disabling the mobile phone's networking abilities is a requirement for the app to be used as intended, check our <a href="./wiki/Security-And-Privacy.html">wiki</a> for more details.</strong></p>
+<p>Have a look at the tutorial on our wiki to learn how to use <a href="./tutorials/Kusama-tutorial.html">Parity Signer together with Polkadot-js app</a>.</p>
 <p>Any data transfer from or to the app happens using QR code. By doing so, the most sensitive piece of information, the private keys, will never leave the phone. The Parity Signer mobile app can be used to store any Substrate account, this includes Polkadot (DOT) and Kusama (KSM) networks.</p>
 <h2 id="key-features"><a class="header" href="#key-features">Key features</a></h2>
 <ul>
@@ -166,26 +171,26 @@
 <p>Currently Signer is available only for iOS. Android version is coming soon.</p>
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
 <p><strong>These tutorials and docs are heavily outdated at the moment, please use them as references or help improving</strong></p>
-<p>If you are upgrading from older version of Signer, please see <a href="./docs/wiki/Changelog.html">changelog</a> and <a href="./docs/wiki/Upgrading.html">upgrading Signer</a></p>
+<p>If you are upgrading from older version of Signer, please see <a href="./wiki/Changelog.html">changelog</a> and <a href="./wiki/Upgrading.html">upgrading Signer</a></p>
 <p>Please note that the Signer app is an advanced tool designed for maximum security and complex features. In many use cases, more user-friendly tools would be sufficient.</p>
-<p><a href="./docs/tutorials/Start.html">Getting started guide</a></p>
+<p><a href="./tutorials/Start.html">Getting started guide</a></p>
 <h3 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h3>
 <ul>
-<li><a href="./docs/tutorials/Kusama-tutorial.html">Signing with Pokadot.js Apps</a></li>
-<li><a href="./docs/tutorials/Recover-Account-Polkadotjs.html">Recover Account from Polkadot.js Apps</a></li>
-<li><a href="./docs/tutorials/Hierarchical-Deterministic-Key-Derivation.html">Manage Accounts on Parity Signer</a></li>
-<li><a href="./docs/tutorials/New-Network.html">Update New Network</a></li>
+<li><a href="./tutorials/Kusama-tutorial.html">Signing with Pokadot.js Apps</a></li>
+<li><a href="./tutorials/Recover-Account-Polkadotjs.html">Recover Account from Polkadot.js Apps</a></li>
+<li><a href="./tutorials/Hierarchical-Deterministic-Key-Derivation.html">Manage Accounts on Parity Signer</a></li>
+<li><a href="./tutorials/New-Network.html">Update New Network</a></li>
 </ul>
 <h3 id="wiki"><a class="header" href="#wiki">Wiki</a></h3>
 <ul>
-<li><a href="./docs/wiki/Security-And-Privacy.html">Security and Privacy</a></li>
-<li><a href="./docs/wiki/Development.html">Development</a></li>
-<li><a href="./docs/wiki/Building-And-Publishing.html">Building and Publishing</a></li>
-<li><a href="./docs/wiki/Test.html">Testing</a></li>
-<li><a href="./docs/wiki/Troubleshooting.html">Troubleshooting</a></li>
-<li><a href="./docs/wiki/QA.html">QA Check List</a></li>
+<li><a href="./wiki/Security-And-Privacy.html">Security and Privacy</a></li>
+<li><a href="./wiki/Development.html">Development</a></li>
+<li><a href="./wiki/Building-And-Publishing.html">Building and Publishing</a></li>
+<li><a href="./wiki/Test.html">Testing</a></li>
+<li><a href="./wiki/Troubleshooting.html">Troubleshooting</a></li>
+<li><a href="./wiki/QA.html">QA Check List</a></li>
 <li><a href="https://substrate.dev/docs/en/knowledgebase/integrate/subkey">Key derivations</a></li>
-<li><a href="./docs/wiki/Changelog.html">Changelog</a></li>
+<li><a href="./wiki/Changelog.html">Changelog</a></li>
 <li><a href="https://github.com/maciejhirsz/uos">QR encoding definition</a></li>
 </ul>
 <h3 id="legacy-versions"><a class="header" href="#legacy-versions">Legacy versions</a></h3>
@@ -354,71 +359,13 @@
 <p>None, it's as simple as that. The Parity Signer Mobile Android and iOS apps do not send any sort of data to Parity Technologies or any partner and work completely offline once installed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
 <h3 id="test-signing"><a class="header" href="#test-signing">Test Signing</a></h3>
-<p>For a super quick test and to avoid the hurdle of creating an account, sending funds to it and finally create a transaction as described in the <a href="https://wiki.parity.io/Parity-Signer-Mobile-App-Fether-tutorial">tutorial using Parity Fether</a> or the <a href="https://wiki.parity.io/Parity-Signer-Mobile-App-MyCrypto-tutorial">tutorial using MyCrypto</a>, you can use a pre-funded account on Kovan Network and the following workflow. To get access to this account, you need to:</p>
-<ul>
-<li>Recover an account</li>
-<li>Select <code>Kovan</code> network and choose a name</li>
-<li>Use the recovery phrase: <code>this is sparta</code> you'll get the account address: <code>006E27B6A72E1f34C626762F3C4761547Aff1421</code></li>
-<li>Validate and accept the warning message</li>
-<li>Chose a pin code</li>
-<li>Scan this QR code to sign a transaction sending some Kovan Eth to the same account.</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/paritytech/parity-signer/master/docs/tx_qr.png" alt="Sample QR Code" /></p>
-<p>Corresponding data:</p>
-<pre><code class="language-json">{
-    &quot;action&quot;: &quot;signTransaction&quot;,
-    &quot;data&quot;: {
-        &quot;account&quot;: &quot;006e27b6a72e1f34c626762f3c4761547aff1421&quot;,
-        &quot;rlp&quot;: &quot;ea1584ee6b280082520894006e27b6a72e1f34c626762f3c4761547aff1421872386f26fc10000802a8080&quot;
-    }
-}
-</code></pre>
+<p><strong>TODO</strong></p>
 <h3 id="unit-test"><a class="header" href="#unit-test">Unit Test</a></h3>
-<p>If dependencies are not installed please first run <code>yarn install:ios</code> or <code>yarn install</code> for android.</p>
-<p>Run <code>yarn unit</code> for all the units test.</p>
-<p>If debugging is needed:</p>
-<ol>
-<li>Insert <code>debugger;</code> in the code where you think it fails.</li>
-<li>Run <code>yarn unit:debug</code></li>
-<li>Open a new tab in Chrome and go to <code>chrome://inspect</code></li>
-<li>Click the <code>inspect</code> button of target under <code>Remote Target</code></li>
-<li>Back to the terminal, choose one of the node watch commands to run the tests again.</li>
-</ol>
+<p><strong>TODO</strong></p>
+<p>Run <code>cargo test</code> in each crate of <code>rust</code> directory.</p>
 <h3 id="integration-test"><a class="header" href="#integration-test">Integration Test</a></h3>
-<p>Parity Signer is integrated with <a href="https://github.com/wix/Detox">Detox</a> E2E testing. Detox has very detailed <a href="https://github.com/wix/Detox/blob/master/docs/README.md">documentation</a>.</p>
-<p>First make sure <code>detox-cli</code> is installed as global dependency with</p>
-<pre><code>yarn global add detox-cli
-</code></pre>
-<h4 id="complete-test"><a class="header" href="#complete-test">Complete Test</a></h4>
-<p>If dependencies are not installed please first run <code>yarn install:ios</code> or <code>yarn install</code> for android.</p>
-<ol>
-<li>
-<p>run react native server with <code>yarn start</code></p>
-</li>
-<li>
-<p>run <code>yarn e2e:ios</code> or <code>yarn e2e:android</code>.</p>
-</li>
-</ol>
-<h5 id="develop-and-test"><a class="header" href="#develop-and-test">Develop and Test</a></h5>
-<p>Details please refer to Detox official guide <a href="https://github.com/wix/Detox/blob/master/docs/Guide.DevelopingWhileWritingTests.md">here</a></p>
-<p>Once you have run <code>yarn ios</code> you do not need to build it, just run:</p>
-<pre><code class="language-shell">yarn test-e2e:ios
-</code></pre>
-<p>This command will open another simulator with the pre-defined configurations.</p>
-<p>Re-run tests without re-installing the app</p>
-<pre><code>yarn test-e2e:ios --reuse
-</code></pre>
-<p>In order to clear the detox cache run:</p>
-<pre><code>detox clean-framework-cache &amp;&amp; detox build-framework-cache
-</code></pre>
-<p>In order to clear the ios simulator run:</p>
-<pre><code>xcrun simctl erase all
-</code></pre>
-<p>If you want to use another specific emulator/simulator than those defined in the configuration, add <code>--device-name</code> flag (on Android API version is needed), for example:</p>
-<pre><code>yarn test-e2e:ios --device-name iPhone X
-yarn test-e2e:android --device-name Pixel_2_API_28
-</code></pre>
-<p>On Android please replace <code>ios</code> with <code>android</code>, currently Detox's Android 0.60.x support is in progress, if there is an error, try to build it again with <code>yarn build-e2e:android</code></p>
+<p><strong>TODO</strong></p>
+<p>Should be implemented with native frameworks as soon as we know what to test.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <h2 id="no-dimension-set-for-key-window-on-android--50"><a class="header" href="#no-dimension-set-for-key-window-on-android--50">&quot;No dimension set for key window&quot; on Android &lt; 5.0</a></h2>
 <p>This error should be accompanied with <code>error: closed</code> in terminal when deploying the debug version of the signer on a device that runs Android older than 5.0. It happens because the Android API does not support the reverse proxy that would allow the phone to communicate with the debug server on your computer.</p>
@@ -477,7 +424,7 @@ yarn test-e2e:android --device-name Pixel_2_API_28
 <h3 id="disable-network"><a class="header" href="#disable-network">Disable network</a></h3>
 <p>Before starting the Signer, you should make sure that network is disabled. Many operating systems allow only partial network monitoring; although there are network detection features in Signer, they are limited and only have informational function. <strong>User is responsible for maintaining airgapped state!</strong> The simplest way to disable connectivity is setting the phone in airplane mode. Advanced users might want to use physical methods to further protect the phone from connections. Perform all preparations before starting the Signer app!</p>
 <h3 id="start-the-signer"><a class="header" href="#start-the-signer">Start the Signer</a></h3>
-<p>Start the app. Read and accept information provided on launch. Congratulations! The app is ready to use now, however it does not have any keys and only few basic built-in networks. Proceed with <a href="wiki/./docs/tutorials/Start.html">setting up keys</a> and <a href="wiki/./docs/tutorials/New-Network.html">adding new networks</a>.</p>
+<p>Start the app. Read and accept information provided on launch. Congratulations! The app is ready to use now, however it does not have any keys and only few basic built-in networks. Proceed with <a href="wiki/../tutorials/Start.html">setting up keys</a> and <a href="wiki/../tutorials/New-Network.html">adding new networks</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="parity-signer-accounts-management"><a class="header" href="#parity-signer-accounts-management">Parity Signer Accounts Management</a></h1>
 <p>Parity Signer v4 has introduced the Hierarchical Deterministic Key Derivation (HDKD) feature for Substrate networks. This article explains how to use this feature.</p>
 <ul>
@@ -546,7 +493,7 @@ yarn test-e2e:android --device-name Pixel_2_API_28
 <li>Once Parity Signer has been installed, enable airplane mode and make sure to switch off Wifi, Bluetooth or any connection ability of the device.</li>
 <li>Only charge the phone using a power outlet that is never connected to the internet. Only charge the phone with the manufacturer's charging adapter. Do not charge the phone on public USB chargers.</li>
 </ul>
-<p>Please find more info <a href="tutorials/Parity-Signer-Mobile-App">here</a> about the Parity Signer application.</p>
+<p>Please find more info <a href="tutorials/Kusama-tutorial.html#Parity-Signer-Mobile-App">here</a> about the Parity Signer application.</p>
 <h3 id="install-parity-signer-mobile-application"><a class="header" href="#install-parity-signer-mobile-application">Install Parity Signer mobile application</a></h3>
 <p>Install Parity Signer making sure that it originated from <strong>Parity Technologies</strong></p>
 <ul>
@@ -563,7 +510,7 @@ If your phone gets stolen/broken/forgotten this will be the only way to <a href=
 <p>You will then be asked to choose a pin code. This pin will be needed later on to unlock your account to manage the identity or sign a transaction.</p>
 <p>The next screen will allow you to select a network to generate an account.
 If you choose an Ethereum network, the related Ethereum account will be generated for the identity,</p>
-<p>If you choose a Substrate network (like Kusama), you will first create a root account, and then you will be able to derive more accounts with specified paths and names. The name can be changed later on, but once the path is set, it can not be changed. More information about path derivation see <a href="tutorials/Parity-Signer-Hierarchical-Deterministic-Key-Derivation">here</a>.</p>
+<p>If you choose a Substrate network (like Kusama), you will first create a root account, and then you will be able to derive more accounts with specified paths and names. The name can be changed later on, but once the path is set, it can not be changed. More information about path derivation see <a href="tutorials/Kusama-tutorial.html#Parity-Signer-Hierarchical-Deterministic-Key-Derivation">here</a>.</p>
 <p>For each derived account, you will be able to see the address and its related QR code.</p>
 <p><img src="tutorials/images/Parity-Signer-apps-0.png" alt="create account" /></p>
 <h3 id="recover-an-identity-with-your-recovery-phrase"><a class="header" href="#recover-an-identity-with-your-recovery-phrase">Recover an identity with your recovery phrase</a></h3>
@@ -620,7 +567,7 @@ If you choose an Ethereum network, the related Ethereum account will be generate
 <h3 id="1-get-the-network-metadata-as-qr-code"><a class="header" href="#1-get-the-network-metadata-as-qr-code">1. Get the network metadata as QR Code</a></h3>
 <p>Switch to the network you want to play with on Polkadot.js app. Click <code>Settings</code> -&gt; <code>MetaData</code></p>
 <p><img src="tutorials/images/Network-Metadata-QR.png" alt="Network Metadata QR Code" /></p>
-<p>Here we can see the chain specifications like <code>Network Name</code>, <code>Address Prefix</code>, and <code>Genesis Hash</code> etc. They are all the metaData of the network which is required by Parity Signer. The only item we could change is network color, it is used on Parity Signer to distinguish other networks. </p>
+<p>Here we can see the chain specifications like <code>Network Name</code>, <code>Address Prefix</code>, and <code>Genesis Hash</code> etc. They are all the metaData of the network which is required by Parity Signer. The only item we could change is network color, it is used on Parity Signer to distinguish other networks.</p>
 <p>On the right side is the QR Code we need.</p>
 <h3 id="2-scan-metadata-qr-code-with-parity-signer"><a class="header" href="#2-scan-metadata-qr-code-with-parity-signer">2. Scan metadata QR code with Parity Signer</a></h3>
 <p>Now on the Parity Signer app, click the QR scanner Button, and scan this QR code stream. Please check the hash and note the signig key - now all updates for this network and this particular Signer devise should be signed with the same key.</p>
@@ -628,7 +575,7 @@ If you choose an Ethereum network, the related Ethereum account will be generate
 <p>Please note that as network develops, its metadata will change over time. New metadata should be downloaded in similar manner when new version is available before any transactions could be signed.</p>
 <h2 id="generate-network-updating-qr-stream"><a class="header" href="#generate-network-updating-qr-stream">Generate network updating QR stream</a></h2>
 <p>This is an advanced operation that should only be performed by experienced users on trusted machine. Remember, that any inaccuracy in network specifications or metadata may lead to serious security threat, loss of funds and/or general account access!</p>
-<p><a href="tutorials/../rust/generate_message/readme.html">Update generator instructions</a></p>
+<p>Please follow readme in <code>rust/generate_message</code> crate</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="recover-account-from-polkadotjs"><a class="header" href="#recover-account-from-polkadotjs">Recover Account from PolkadotJs</a></h1>
 <p>The default behaviour on Parity Signer and <a href="https://polkadot.js.org/apps/">PolkadotJs Apps</a> is a little different. This tutorial will walk you through recovering an account on Parity Signer from PolkadotJs Apps.</p>
 <ul>
@@ -658,16 +605,16 @@ If you choose an Ethereum network, the related Ethereum account will be generate
 <h3 id="disable-network-1"><a class="header" href="#disable-network-1">Disable network</a></h3>
 <p>Before starting the Signer, you should make sure that network is disabled. Many operating systems allow only partial network monitoring; although there are network detection features in Signer, they are limited and only have informational function. <strong>User is responsible for maintaining airgapped state!</strong> The simplest way to disable connectivity is setting the phone in airplane mode. Advanced users might want to use physical methods to further protect the phone from connections. Perform all preparations before starting the Signer app!</p>
 <h2 id="first-start"><a class="header" href="#first-start">First start</a></h2>
-<p>When you first launch Signer, it prompts you to read and accept terms and conditions and privacy policy. Once that is done, the database is pre-populated with built-in networks and Signer is ready for use. It could <a href="tutorials/./docs/tutorials/New-Network.html">import network data</a> or <a href="tutorials/./docs/tutorials/Kusama-tutorial.html">read transactions</a>, but to sign anything you need to create keys.</p>
+<p>When you first launch Signer, it prompts you to read and accept terms and conditions and privacy policy. Once that is done, the database is pre-populated with built-in networks and Signer is ready for use. It could <a href="tutorials/./New-Network.html">import network data</a> or <a href="tutorials/./Kusama-tutorial.html">read transactions</a>, but to sign anything you need to create keys.</p>
 <h3 id="create-keys"><a class="header" href="#create-keys">Create keys</a></h3>
 <p>Open key manager by tapping bottom left symbol. On fresh start you will be prompted to create seed (otherwise you could always create more seeds by tapping <code>New seed</code> button in Key Manager). Enter any convenient seed name (it does not matter anything and is not used anywhere except for this particulat Signer device) and - if you would like to use custom seed phrase - switch to recovery mode and type the seed phrase. Custom seed phrase should be used only to recover or import existing key(s), do not input custom seed phrase unless it is properly random! <strong>Security of your accounts relies on randomness of seed phrase</strong>. If you are generating new seed phrase, use built-in random generator and do not input a custom seed phrase.</p>
 <p>Once you click <code>create</code> button, you will be prompted to authenticate yourself. This will happen every time cruptographic engine of the phone is used to handle seeds - on all creations, backups, derivations and signatures and in some OS versions on starting the Signer.</p>
 <p>You will see the created secret seed. Please back it up on paper and store it in safe place. If you lose your Signer device or it will become non-functional, you will be able to recover your keys using this seed phrase. Anyone could recover your keys with knowledge of this phrase. If you lose this seed phrase, though, <strong>it will be impossible to recover your keys</strong>. You can check the seed phrase anytime in Settings menu, but make sure that it is backed up at all times.</p>
 <p>Once you dismiss seed phrase backup screen, the seed and some associated keys will be created. For every network known to the Signer, a network root derivation key will be generated, hard-derived from seed phrase with network name. A root key will be generated and made available in all networks. <strong>Do not use the root key unless you know what you do!</strong>.</p>
-<p>To learn more on key generation, read <a href="https://substrate.dev/docs/en/knowledgebase/integrate/subkey">subkey specifications</a> that Signer follows tightly and <a href="tutorials/./docs/tutorials/Hierarchical-Deterministic-Key-Derivation.html">Signer key management</a>.</p>
+<p>To learn more on key generation, read <a href="https://substrate.dev/docs/en/knowledgebase/integrate/subkey">subkey specifications</a> that Signer follows tightly and <a href="tutorials/./Hierarchical-Deterministic-Key-Derivation.html">Signer key management</a>.</p>
 <h3 id="export-public-key"><a class="header" href="#export-public-key">Export public key</a></h3>
 <p>Once you have a keypair you would like to use, you should first export it to hot wallet. Tap the key and select <code>Export</code> button. You will see the export QR code you can use with hot wallet.</p>
-<p>Details on <a href="tutorials/./docs/tutorials/Kusama-tutorial.html">signing with Pokadot.js Apps</a></p>
+<p>Details on <a href="tutorials/./Kusama-tutorial.html">signing with Pokadot.js Apps</a></p>
 
                     </main>
 
@@ -711,10 +658,14 @@ If you choose an Ethereum network, the related Ethereum account will be generate
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+                <script type="text/javascript" src="mermaid.min.js"></script>
+                <script type="text/javascript" src="mermaid-init.js"></script>
         
                         <script type="text/javascript">
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
                 
