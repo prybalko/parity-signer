@@ -1819,6 +1819,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "qr_generator"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "constants",
+ "db_handling",
+ "definitions",
+ "hex",
+ "meta_reading",
+ "parity-scale-codec",
+ "qrcode_rtx",
+ "serde",
+ "sled",
+ "sp-core",
+ "toml",
+]
+
+[[package]]
 name = "qr_reader_phone"
 version = "0.1.0"
 dependencies = [
