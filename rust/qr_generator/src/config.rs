@@ -13,8 +13,8 @@ pub struct Chain {
 }
 
 
-pub fn read_config() -> anyhow::Result<Config> {
-    let config_toml = fs::read_to_string("config.toml")?;
+pub fn read_config(path: &str) -> anyhow::Result<Config> {
+    let config_toml = fs::read_to_string(path)?;
     let config = toml::from_str::<Config>(config_toml.as_str())?;
     Ok(config)
 }

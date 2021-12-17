@@ -3,7 +3,7 @@ use qr_generator::{generate_metadata_qr, config::read_config};
 
 
 fn main() -> Result<(), String> {
-	let config = match read_config() {
+	let config = match read_config("config.toml") {
 		Ok(x) => x,
 		Err(e) => return Err(format!("Error reading config file. {}", e)),
 	};
@@ -20,7 +20,7 @@ fn main() -> Result<(), String> {
 	}
 
 	while let Some(handle) = handlers.pop() {
-		handle.join();
+		handle.join().unwrap();
 	}
 	Ok(())
 }
